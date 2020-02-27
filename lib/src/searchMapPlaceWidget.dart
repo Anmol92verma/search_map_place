@@ -202,7 +202,7 @@ class _SearchMapPlaceWidgetState extends State<SearchMapPlaceWidget> with Single
       String url =
           "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$input&key=${widget.apiKey}&language=${widget.language}";
       if (widget.sessionToken!=null) {
-        url += "&sessionToken=${widget.sessionToken}";
+        url += "&sessiontoken=${widget.sessionToken}";
       }
       if (widget.location != null && widget.radius != null) {
         url += "&location=${widget.location.latitude},${widget.location.longitude}&radius=${widget.radius}";
