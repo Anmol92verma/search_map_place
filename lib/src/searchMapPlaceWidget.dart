@@ -12,10 +12,13 @@ class SearchMapPlaceWidget extends StatefulWidget {
     this.location,
     this.radius,
     this.strictBounds = false,
+    this.sessionToken
   }) : assert((location == null && radius == null) || (location != null && radius != null));
 
   /// API Key of the Google Maps API.
   final String apiKey;
+
+  final String sessionToken;
 
   /// Placeholder text to show when the user has not entered any input.
   final String placeholder;
@@ -198,6 +201,9 @@ class _SearchMapPlaceWidgetState extends State<SearchMapPlaceWidget> with Single
     if (input.length > 0) {
       String url =
           "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$input&key=${widget.apiKey}&language=${widget.language}";
+      if (widget.sessionToken!=null) {
+        url += "&sessionToken=${widget.sessionToken}";
+      }
       if (widget.location != null && widget.radius != null) {
         url += "&location=${widget.location.latitude},${widget.location.longitude}&radius=${widget.radius}";
         if (widget.strictBounds) {
