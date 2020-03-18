@@ -77,12 +77,10 @@ packages:
   google_maps_flutter:
     dependency: "direct main"
     description:
-      path: "packages/google_maps_flutter"
-      ref: development
-      resolved-ref: "5de0c2a160915dbd22dbafe6838afe5045aba620"
-      url: "git://github.com/Anmol92verma/plugins"
-    source: git
-    version: "0.5.23"
+      name: google_maps_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.24+1"
   http:
     dependency: "direct main"
     description:

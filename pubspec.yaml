@@ -10,11 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  google_maps_flutter:
-    git:
-      url: git://github.com/Anmol92verma/plugins
-      path: packages/google_maps_flutter
-      ref: development
+  google_maps_flutter: ^0.5.24+1
   http: ^0.12.0+2
 
 dev_dependencies:
